@@ -1,5 +1,7 @@
 pipeline {
-    agent none
+    agent {
+        label 'docker-ssh-jenkins-agent'
+    }
     options {
         skipStagesAfterUnstable()
     }
